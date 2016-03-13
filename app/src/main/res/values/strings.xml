@@ -2,4 +2,13 @@
     <string name="app_name">Fvdo</string>
     <string name="facebook_app_id">978349915554517</string>
     <string name="title_activity_main">MainActivity</string>
+
+
+    <string-array name="tabitems">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
 </resources>

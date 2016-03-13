@@ -15,6 +15,9 @@ import com.facebook.appevents.AppEventsLogger;
 
 import org.json.JSONObject;
 
+import activities.LoginActivity;
+import activities.MainActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     AccessTokenTracker accessTokenTracker;
