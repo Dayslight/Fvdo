@@ -1,56 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="3dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_margin="10dp"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView2"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:textSize="12sp" />
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:layout_alignTop="@+id/textView"
-            android:layout_alignParentRight="true"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView"
             android:layout_alignParentEnd="true"
-            android:src="@mipmap/ic_launcher"
-            android:layout_margin="10dp" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccentTrans">
+
+            <TextView
+                android:id="@+id/musicpagename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="MegaDeth"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="16sp"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/musicpagename2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/musicpagename"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/musicpagename"
+                android:text="Small Text"
+                android:textColor="@color/colorWhite"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/musicpagename"
+                android:layout_margin="10dp"
+
+                android:src="@mipmap/ic_launcher" />
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

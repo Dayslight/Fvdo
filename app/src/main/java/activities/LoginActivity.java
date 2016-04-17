@@ -18,6 +18,8 @@ import com.fvdo.R;
 
 import org.json.JSONObject;
 
+import helper.GeneralHelper;
+
 public class LoginActivity extends AppCompatActivity {
 
     LoginButton loginButton;
@@ -25,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String TAG = "LoginActivity";
     String fbid;
+    GeneralHelper generalHelper;
 
 
     @Override
@@ -32,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
+
+        generalHelper = new GeneralHelper(getApplicationContext());
 
         setContentView(R.layout.activity_login);
 
@@ -41,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setReadPermissions("user_actions.music");
         loginButton.setReadPermissions("email");
         loginButton.setReadPermissions("user_likes");
+        loginButton.setReadPermissions("read_custom_friendlists");
 
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -56,17 +62,16 @@ public class LoginActivity extends AppCompatActivity {
 //                        Log.d(TAG, user.optString("name"));
 //                        Log.d(TAG, user.optString("id"));
 
-//                        fbid = user.optString("id");
+                        fbid = user.optString("id");
 
                         System.out.println("Check fbid login : " + fbid);
+                        generalHelper.setFbID(fbid);
 
 
                     }
                 }).executeAsync();
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra("fbid", fbid);
-
                 startActivity(intent);
                 finish();
             }
