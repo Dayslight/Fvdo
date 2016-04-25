@@ -12,7 +12,7 @@ import helper.JsonParserHelper;
 import lastfmdatamodel.LastFmDataModel;
 
 /**
- * Created by bijaybogati on 4/16/16.
+ * Created by sujitshrestha on 4/16/16.
  */
 public class LastFmAsyc extends
         AsyncTask<Void, Void, List<LastFmDataModel.Track>> {

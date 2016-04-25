@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import org.json.JSONObject;
 
 /**
- * Created by bijaybogati on 4/9/16.
+ * Created by sujitshrestha on 4/9/16.
  */
 public class FBJsonParser extends
         AsyncTask<Void, Void, JSONObject> {

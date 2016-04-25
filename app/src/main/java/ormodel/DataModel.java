@@ -4,7 +4,7 @@ import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 
 /**
- * Created by bijaybogati on 4/9/16.
+ * Created by sujitshrestha on 4/9/16.
  */
 public class DataModel extends Model {
     @Column(name = "name")

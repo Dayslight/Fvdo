@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by bijaybogati on 4/9/16.
+ * Created by sujitshrestha on 4/9/16.
  */
 public class GeneralHelper {
 

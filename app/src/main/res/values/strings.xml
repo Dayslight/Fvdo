@@ -2,6 +2,7 @@
     <string name="app_name">FVDO</string>
     <string name="facebook_app_id">1009888129101557</string>
     <string name="lastfmapi">b732530dd0b2801845789bc685851106</string>
+    <string name="youtubeapi">AIzaSyBoZIlicV1_2d6P8DJOnDN_IvdRAa7cjHA</string>
 
     <string name="title_activity_main">MainActivity</string>
 

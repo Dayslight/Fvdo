@@ -1,5 +1,6 @@
 package fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import com.fvdo.R;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import activities.VideoViewActivity;
 import adapters.MusicRecyclerAdapter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -60,14 +62,12 @@ public class VideoFragment extends Fragment implements MusicRecyclerAdapter.OnIt
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
             dummyfragScrollableview.setLayoutManager(linearLayoutManager);
             dummyfragScrollableview.setHasFixedSize(true);
-            adapter = new MusicRecyclerAdapter(getActivity(),trackList);
+            adapter = new MusicRecyclerAdapter(getActivity(), trackList);
             dummyfragScrollableview.setAdapter(adapter);
 
-            adapter.clickListener = this;
+            MusicRecyclerAdapter.clickListener = this;
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -82,6 +82,7 @@ public class VideoFragment extends Fragment implements MusicRecyclerAdapter.OnIt
 
     @Override
     public void onItemClick(View view, int position) {
-        System.out.println("Check this ck...");
+        Intent intent = new Intent(getActivity(), VideoViewActivity.class);
+        startActivity(intent);
     }
 }

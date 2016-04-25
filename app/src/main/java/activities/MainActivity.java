@@ -29,11 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar.setTitle("FVDO");
 
-
         Fragment fragment = new HomeFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(R.id.frame, fragment).commit();
-
 
     }
 

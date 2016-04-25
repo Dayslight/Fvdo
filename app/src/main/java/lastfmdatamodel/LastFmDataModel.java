@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by bijaybogati on 4/16/16.
+ * Created by sujitshrestha on 4/16/16.
  */
 public class LastFmDataModel {
 
